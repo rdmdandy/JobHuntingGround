@@ -27,4 +27,20 @@
     background-image: linear-gradient(hsl(222 15% 17% / 0.46) 1px, transparent 1px), linear-gradient(90deg, hsl(222 15% 17% / 0.46) 1px, transparent 1px);
     background-size: 32px 32px;
   }
+
+  /* Keep every view on the same viewport-wide shell. */
+  main > header > div.max-w-6xl,
+  main > div.grid.max-w-6xl {
+    width: 100%;
+    max-width: none;
+  }
+
+  @media (min-width: 1024px) {
+    main > div.grid > aside {
+      position: sticky;
+      top: 0;
+      align-self: start;
+      min-height: 100vh;
+    }
+  }
 }
